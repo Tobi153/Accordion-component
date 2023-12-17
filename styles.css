@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1 rem =*/
+}
+
+body {
+  background-color: hsl(275, 100%, 97%);
+  font-family: "Work Sans", sans-serif;
+}
+
+.heading {
+  margin-bottom: 1rem;
+}
+
+.heading-primary {
+  font-size: 5.7rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+}
+
+.faq.active .answer-text {
+  display: block;
+}
+
+.answer-text {
+  display: none;
+  color: hsl(292, 16%, 49%);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding-top: 2rem;
+}
+
+.faq.active .icon-minus {
+  display: block;
+}
+.faq.active .icon-plus {
+  display: none;
+}
+
+.icon-minus {
+  display: none;
+}
+
+.icon-plus,
+.icon-minus {
+  cursor: pointer;
+}
+
+.question-text {
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+  cursor: pointer;
+}
+
+.question-text:hover,
+.question-text:active {
+  color: #ad28eb;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq {
+  padding: 2.2rem 0 2.2rem;
+}
+
+.faq:not(:last-child) {
+  border-bottom: 1px solid hsla(292, 42%, 14%, 0.04);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bg-pattern {
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  height: 32rem;
+  background-position: top;
+  background-size: cover;
+}
+
+.section-faq {
+  width: 60rem;
+  height: 56.5rem;
+  background-color: #fff;
+  box-shadow: 0 3rem 4rem hsla(293, 16%, 49%, 0.185);
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transform: translateY(-27%);
+  border-radius: 1.5rem;
+  z-index: 2;
+  padding: 4.1rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 41em) {
+  html {
+    font-size: 50%;
+  }
+
+  .bg-pattern {
+    height: 29rem;
+    background-position: bottom;
+    /* background-size: cover; */
+  }
+
+  .heading {
+    gap: 3rem;
+  }
+
+  .heading svg {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .section-faq {
+    max-width: 50rem;
+    width: 88%;
+    padding: 2.9rem;
+    border-radius: 1rem;
+    height: 65rem;
+    transform: translateY(-17%);
+  }
+  .heading-primary {
+    font-size: 4rem;
+  }
+
+  .question-text {
+    font-size: 2rem;
+    width: 28rem;
+  }
+
+  .answer-text {
+    font-size: 1.8rem;
+    padding-top: 2.2rem;
+  }
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
